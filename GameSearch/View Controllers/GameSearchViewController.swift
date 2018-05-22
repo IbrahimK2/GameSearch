@@ -56,7 +56,7 @@ extension GameSearchViewController: UISearchBarDelegate {
         let params = ["field_list": "name,image,deck",
                       "query": searchTerm]
         
-        client.request(resource: "searchh", withParameters: params) { (res) in
+        client.request(resource: "search", withParameters: params) { (res) in
             switch res {
             case .response(let data):
                 if let results = data.results {
